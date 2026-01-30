@@ -186,21 +186,45 @@ footer {
     margin-top: 3rem;
 }
 
+.hero {
+    position: relative;          /* Important: contains the leaves */
+    overflow: hidden;            /* Prevents leaves from spilling out */
+}
+
 .floating-leaves {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden;
+    position: absolute;
+    inset: 0;                    /* full hero coverage */
+    pointer-events: none;
+    z-index: 1;                  /* Behind text, above background */
 }
-.floating-leaves::before, .floating-leaves::after {
-  content: '';
-  position: absolute;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 Q60 0 70 10..." fill="%234A7043"/></svg>') no-repeat; /* simplify SVG path for leaf */
-  width: 40px; height: 60px; opacity: 0.4;
-  animation: float 15s infinite linear;
+
+.floating-leaves .leaf {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    opacity: 0.5;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear infinite;
+    will-change: transform;      /* Smooth performance */
 }
-.floating-leaves::after { animation-delay: -7s; left: 60%; top: 20%; }
-@keyframes float {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-100vh) rotate(360deg); }
+
+/* Use a valid simple leaf SVG (olive green) */
+.leaf {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 3.31 1.34 6.3 3.5 8.5L12 32l8.5-11.5C22.66 18.3 24 15.31 24 12 24 5.37 18.63 0 12 0zm0 4c4.41 0 8 3.59 8 8 0 2.21-0.89 4.21-2.34 5.66L12 26.32 6.34 17.66C4.89 16.21 4 14.21 4 12c0-4.41 3.59-8 8-8z" fill="%234A7043"/></svg>');
+}
+
+/* Position & randomize speeds/delays for natural feel */
+.floating-leaves .leaf:nth-child(1) { left: 10%; top: -10%; animation-duration: 18s; animation-delay: 0s; }
+.floating-leaves .leaf:nth-child(2) { left: 25%; top: -15%; animation-duration: 22s; animation-delay: -4s; }
+.floating-leaves .leaf:nth-child(3) { left: 45%; top: -20%; animation-duration: 15s; animation-delay: -8s; }
+.floating-leaves .leaf:nth-child(4) { left: 65%; top: -5%; animation-duration: 20s; animation-delay: -12s; }
+.floating-leaves .leaf:nth-child(5) { left: 80%; top: -12%; animation-duration: 25s; animation-delay: -6s; }
+
+/* Falling animation (downward) */
+@keyframes fall {
+    0%   { transform: translateY(-100%) rotate(0deg); }
+    100% { transform: translateY(120vh) rotate(720deg); } /* Extra rotation for spin */
 }
 
 /* Responsive */
