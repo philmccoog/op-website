@@ -105,23 +105,18 @@
         </div>
     </footer>
     <script>
-    // Check for saved user preference or system preference
     const toggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // Load saved preference
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
-        toggle.checked = true;
-    } else if (localStorage.getItem('darkMode') === 'disabled') {
+    // Check if user has previously chosen light mode
+    if (localStorage.getItem('darkMode') === 'disabled') {
         body.classList.remove('dark-mode');
         toggle.checked = false;
     } else {
-        // Use system preference as default
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            body.classList.add('dark-mode');
-            toggle.checked = true;
-        }
+        // Default = dark mode (even on first visit)
+        body.classList.add('dark-mode');
+        toggle.checked = true;
+        localStorage.setItem('darkMode', 'enabled'); // remember choice
     }
 
     // Toggle handler
