@@ -85,7 +85,8 @@ nav a:hover {
 .hero {
     background: var(--bg-section);
     text-align: center;
-    padding: 100px 20px 80px;
+    padding: 140px 20px 100px;
+    min-height: 70vh
 }
 
 .hero h2 {
@@ -230,7 +231,36 @@ footer {
     0%   { transform: translateY(-100%) rotate(0deg); }
     100% { transform: translateY(120vh) rotate(1080deg); } /* 3 full spins */
 }
+/* Hero logo - massive and centered */
+.hero-logo-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
+.hero-logo {
+    max-width: 300px;               /* adjust this value to make it larger/smaller */
+    width: 80vw;                    /* responsive: up to 80% of viewport on small screens */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 8px 16px rgba(74, 112, 67, 0.3)); /* subtle shadow for pop */
+}
+
+/* Optional: smaller logo/text in header */
+.logo-text.small h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* Make hero padding larger to give the logo breathing room */
+.hero {
+    padding: 140px 20px 100px;     /* more top space for big logo */
+    min-height: 70vh;              /* at least decent height */
+}
+
+/
+}
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
@@ -243,10 +273,13 @@ footer {
         text-align: center;
     }
     .hero {
-        padding: 80px 20px 60px;
+        padding: 100px 20px 80px;
     }
     .hero h2 {
         font-size: 2.2rem;
+    }
+    .hero-logo {
+        max-width: 240px;
     }
 }
 }
