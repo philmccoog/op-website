@@ -191,40 +191,44 @@ footer {
     overflow: hidden;            /* Prevents leaves from spilling out */
 }
 
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
 .floating-leaves {
     position: absolute;
-    inset: 0;                    /* full hero coverage */
+    inset: 0;
     pointer-events: none;
-    z-index: 1;                  /* Behind text, above background */
+    z-index: 1;
 }
 
 .floating-leaves .leaf {
     position: absolute;
-    width: 40px;
-    height: 60px;
-    opacity: 0.5;
+    width: 50px;
+    height: 70px;
+    opacity: 0.6;
     background-size: contain;
     background-repeat: no-repeat;
     animation: fall linear infinite;
-    will-change: transform;      /* Smooth performance */
+    will-change: transform;
 }
 
-/* Use a valid simple leaf SVG (olive green) */
-.leaf {
-    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 3.31 1.34 6.3 3.5 8.5L12 32l8.5-11.5C22.66 18.3 24 15.31 24 12 24 5.37 18.63 0 12 0zm0 4c4.41 0 8 3.59 8 8 0 2.21-0.89 4.21-2.34 5.66L12 26.32 6.34 17.66C4.89 16.21 4 14.21 4 12c0-4.41 3.59-8 8-8z" fill="%234A7043"/></svg>');
+/* Single reliable olive leaf SVG (green fill) – repeated for all leaves */
+.floating-leaves .leaf {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 48"><path fill="%234A7043" d="M16 0c-4.4 0-8 3.6-8 8 0 2.6 1.2 4.9 3.1 6.4L16 24l4.9-9.6C22.8 12.9 24 10.6 24 8c0-4.4-3.6-8-8-8zm0 4c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z"/></svg>');
 }
 
-/* Position & randomize speeds/delays for natural feel */
-.floating-leaves .leaf:nth-child(1) { left: 10%; top: -10%; animation-duration: 18s; animation-delay: 0s; }
-.floating-leaves .leaf:nth-child(2) { left: 25%; top: -15%; animation-duration: 22s; animation-delay: -4s; }
-.floating-leaves .leaf:nth-child(3) { left: 45%; top: -20%; animation-duration: 15s; animation-delay: -8s; }
-.floating-leaves .leaf:nth-child(4) { left: 65%; top: -5%; animation-duration: 20s; animation-delay: -12s; }
-.floating-leaves .leaf:nth-child(5) { left: 80%; top: -12%; animation-duration: 25s; animation-delay: -6s; }
+/* Random positions, durations, delays for natural variation */
+.floating-leaves .leaf:nth-child(1) { left: 10%; animation-duration: 20s; animation-delay: 0s; }
+.floating-leaves .leaf:nth-child(2) { left: 30%; animation-duration: 25s; animation-delay: -5s; }
+.floating-leaves .leaf:nth-child(3) { left: 50%; animation-duration: 18s; animation-delay: -10s; }
+.floating-leaves .leaf:nth-child(4) { left: 70%; animation-duration: 22s; animation-delay: -3s; }
+.floating-leaves .leaf:nth-child(5) { left: 85%; animation-duration: 28s; animation-delay: -8s; }
 
-/* Falling animation (downward) */
 @keyframes fall {
     0%   { transform: translateY(-100%) rotate(0deg); }
-    100% { transform: translateY(120vh) rotate(720deg); } /* Extra rotation for spin */
+    100% { transform: translateY(120vh) rotate(1080deg); } /* 3 full spins */
 }
 
 /* Responsive */
