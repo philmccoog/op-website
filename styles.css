@@ -197,6 +197,11 @@ footer {
     overflow: hidden;
 }
 
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
 .floating-leaves {
     position: absolute;
     inset: 0;
@@ -206,30 +211,34 @@ footer {
 
 .floating-leaves .leaf {
     position: absolute;
-    width: 50px;
-    height: 70px;
-    opacity: 0.6;
+    width: 60px;               /* slightly larger to match logo prominence */
+    height: 90px;
+    opacity: 0.45;             /* more subtle */
     background-size: contain;
     background-repeat: no-repeat;
     animation: fall linear infinite;
     will-change: transform;
 }
 
-/* Single reliable olive leaf SVG (green fill) – repeated for all leaves */
+/* Leaf shape closely matching your logo (pointed oval leaves) */
 .floating-leaves .leaf {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 48"><path fill="%234A7043" d="M16 0c-4.4 0-8 3.6-8 8 0 2.6 1.2 4.9 3.1 6.4L16 24l4.9-9.6C22.8 12.9 24 10.6 24 8c0-4.4-3.6-8-8-8zm0 4c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 60"><path fill="%234A7043" d="M20 0 C 10 0, 5 15, 15 30 C 20 40, 25 50, 20 60 C 15 50, 10 40, 5 30 C 15 15, 30 0, 20 0 Z M 20 10 C 18 12, 17 18, 18 25 C 19 30, 21 35, 20 40 C 19 35, 21 30, 22 25 C 23 18, 22 12, 20 10 Z"/></svg>');
 }
 
-/* Random positions, durations, delays for natural variation */
-.floating-leaves .leaf:nth-child(1) { left: 10%; animation-duration: 20s; animation-delay: 0s; }
-.floating-leaves .leaf:nth-child(2) { left: 30%; animation-duration: 25s; animation-delay: -5s; }
-.floating-leaves .leaf:nth-child(3) { left: 50%; animation-duration: 18s; animation-delay: -10s; }
-.floating-leaves .leaf:nth-child(4) { left: 70%; animation-duration: 22s; animation-delay: -3s; }
-.floating-leaves .leaf:nth-child(5) { left: 85%; animation-duration: 28s; animation-delay: -8s; }
+/* Optional: slight scale variation for more natural look */
+.floating-leaves .leaf:nth-child(odd) { transform: scale(0.9); }
+.floating-leaves .leaf:nth-child(even) { transform: scale(1.1); }
+
+/* Positioning & timing (5 leaves, staggered) */
+.floating-leaves .leaf:nth-child(1) { left: 12%; animation-duration: 22s; animation-delay: 0s; }
+.floating-leaves .leaf:nth-child(2) { left: 28%; animation-duration: 28s; animation-delay: -6s; }
+.floating-leaves .leaf:nth-child(3) { left: 48%; animation-duration: 20s; animation-delay: -11s; }
+.floating-leaves .leaf:nth-child(4) { left: 68%; animation-duration: 26s; animation-delay: -4s; }
+.floating-leaves .leaf:nth-child(5) { left: 84%; animation-duration: 24s; animation-delay: -9s; }
 
 @keyframes fall {
-    0%   { transform: translateY(-100%) rotate(0deg); }
-    100% { transform: translateY(120vh) rotate(1080deg); } /* 3 full spins */
+    0%   { transform: translateY(-120%) rotate(0deg); }
+    100% { transform: translateY(130vh) rotate(900deg); }  /* ~2.5 spins */
 }
 /* Hero logo - massive and centered */
 .hero-logo-wrapper {
