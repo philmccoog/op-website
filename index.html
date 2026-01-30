@@ -27,6 +27,12 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="theme-toggle">
+    <input type="checkbox" id="dark-mode-toggle">
+    <label for="dark-mode-toggle" class="toggle-label">
+        <span class="toggle-ball"></span>
+    </label>
+</div>
         </div>
     </header>
 
@@ -98,5 +104,36 @@
             <p>&copy; 2026 Olive Park Consulting. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+    // Check for saved user preference or system preference
+    const toggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Load saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        toggle.checked = true;
+    } else if (localStorage.getItem('darkMode') === 'disabled') {
+        body.classList.remove('dark-mode');
+        toggle.checked = false;
+    } else {
+        // Use system preference as default
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark-mode');
+            toggle.checked = true;
+        }
+    }
+
+    // Toggle handler
+    toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+</script>
 </body>
 </html>
