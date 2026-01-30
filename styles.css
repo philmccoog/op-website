@@ -252,16 +252,21 @@ footer {
 /* Hero logo - massive and centered */
 .hero-logo-wrapper {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;     /* ← increased top margin so logo breathes after text */
+    margin-bottom: 1rem;
 }
 
 .hero-logo {
-    max-width: 300px;               /* adjust this value to make it larger/smaller */
-    width: 80vw;                    /* responsive: up to 80% of viewport on small screens */
+    max-width: 320px;       /* adjust this value to control logo size */
+    width: 80%;
     height: auto;
     display: block;
     margin: 0 auto;
-    filter: drop-shadow(0 8px 16px rgba(74, 112, 67, 0.3)); /* subtle shadow for pop */
+}
+
+/* Optional: reduce hero top padding now that logo is lower */
+.hero {
+    padding: 140px 20px 100px;  /* ← was probably higher before */
 }
 
 /* Optional: smaller logo/text in header */
