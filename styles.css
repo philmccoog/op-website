@@ -498,3 +498,33 @@ body.dark-mode .hero {
         max-width: 300px;
     }
 }
+/* Restore hero text formatting inside the combined section */
+.hero-services .container > h2 {
+    text-align: left;                   /* or center if preferred */
+    font-size: 2.8rem;                  /* keep large headline size */
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+.hero-services .container > p {
+    font-size: 1.3rem;
+    max-width: 90%;
+    margin: 0 auto 2rem 0;              /* center-ish but left-aligned text */
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Make sure the whole left column feels like the old hero */
+.services-column {
+    max-width: 600px;                   /* prevents text from stretching too wide */
+}
+
+/* Optional: if you want the text centered on desktop too */
+@media (min-width: 993px) {
+    .services-column h2,
+    .services-column p {
+        text-align: center;
+    }
+}
