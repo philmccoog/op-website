@@ -454,4 +454,47 @@ body.dark-mode .hero {
     .hero-services {
         padding: 80px 0 60px;
     }
+    
+}
+/* Force correct layout for combined section */
+.hero-services {
+    background: var(--bg-section);
+    padding: 120px 0 80px;                /* more top space if needed */
+}
+
+.hero-services-grid {
+    display: grid !important;             /* force grid */
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;                   /* align tops if heights differ */
+}
+
+.services-column h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+/* Make sure service cards look good inside column */
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Hide old .hero class if still lingering */
+.hero { display: none !important; }       /* ← temporary safeguard */
+
+/* Mobile stacking (services top, logo bottom) */
+@media (max-width: 992px) {
+    .hero-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-column {
+        margin-top: 3rem;
+        order: 2;
+    }
+    
+    .hero-logo {
+        max-width: 300px;
+    }
 }
