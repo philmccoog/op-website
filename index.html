@@ -1,146 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive Park Consulting</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olive Park Consulting</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo-wrapper">
-                <img src="op-logo.png" alt="Olive Park Consulting Logo" class="logo">
-                <div class="logo-text">
-                    <h1>Olive Park</h1>
-                    <p>Consulting</p>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="theme-toggle">
-    <input type="checkbox" id="dark-mode-toggle">
-    <label for="dark-mode-toggle" class="toggle-label">
-        <span class="toggle-ball"></span>
-    </label>
-</div>
-        </div>
-    </header>
+  <header>
+    <h1>Olive Park Consulting</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-   
+  <main>
+    <h2>Welcome</h2>
+    <p>Your content goes here.</p>
+  </main>
 
-<section class="hero-services">
-    <!-- Falling leaves background for the entire section -->
-    <div class="floating-leaves">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-    </div>
+  <footer>
+    <p>&copy; 2026 Olive Park Consulting</p>
+  </footer>
 
-    <div class="container">
-        
-
-        <h2>Strategic Technology Guidance for the AI Era</h2>
-        <p>Expert consulting in AI product development, connected hardware, digital ecosystems, and transitions from legacy data centers to cloud and AI architectures.</p>
-    
-         <p class="center">Serving clients from Fortune 50 enterprises to growing companies of 100 employees.</p>
-        
-    </div>
-    <div class="container">
-        <div class="hero-services-grid">
-           
-            <!-- Left column: Services -->
-            <div class="services-column">
-                <h2>Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">AI Product Development</div>
-                    <div class="service-card">AI-Connected Hardware Solutions</div>
-                    <div class="service-card">Digital Ecosystem Design & Architecture</div>
-                    <div class="service-card">Advising Small and Medium Companies Strategic IT</div>
-                    <div class="service-card">Advising Small and Medium Companies Adopting AI</div>
-                </div>
-                
-            </div>
-
-            <!-- Right column: Large centered logo -->
-            <div class="logo-column">
-                <div class="hero-logo-wrapper">
-                    <img src="op-3dlogo.png" alt="Olive Park Consulting Logo" class="hero-logo">
-                </div>
-                <p class="center">Serving clients from Fortune 50 enterprises to agile teams of 100 employees.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="about" class="section about">
-        <div class="container">
-            <h2>About Olive Park Consulting</h2>
-            <p>We partner with forward-thinking organizations to build resilient, innovative technology strategies. Drawing from deep experience across industries, we help you navigate complex transitions and unlock value through AI and modern architectures.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-           
-            <div class="contact-info">
-                 <p>Ready to discuss your technology strategy? Reach out today.</p>
-                <p>Email: info@oliveparkconsulting.com</p>
-                <p>Phone: (503) 863-6409</p>
-            </div>
-            <form name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact" />
-  <!-- keep all your current inputs -->
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Olive Park Consulting. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-    const toggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-
-    // Check if user has previously chosen light mode
-    if (localStorage.getItem('darkMode') === 'disabled') {
-        body.classList.remove('dark-mode');
-        toggle.checked = false;
-    } else {
-        // Default = dark mode (even on first visit)
-        body.classList.add('dark-mode');
-        toggle.checked = true;
-        localStorage.setItem('darkMode', 'enabled'); // remember choice
-    }
-
-    // Toggle handler
-    toggle.addEventListener('change', () => {
-        if (toggle.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('darkMode', 'disabled');
-        }
-    });
-</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
