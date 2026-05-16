@@ -3,27 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olive Park Consulting</title>
+  <title>Olive Park Consulting — AI Strategy for Small Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Olive Park Consulting</h1>
+    <a href="/" class="brand">
+      <img src="images/logo.png" alt="Olive Park Consulting" class="logo" />
+    </a>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
   </header>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>Your content goes here.</p>
-  </main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-decoration">
+      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="250" cy="250" r="220" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="40"/>
+        <circle cx="250" cy="250" r="140" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="30"/>
+        <circle cx="250" cy="250" r="60" fill="rgba(255,255,255,0.04)"/>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <span class="eyebrow">AI Consulting for Small Business</span>
+      <h1>Your business runs on great IT.<br>Now make it run on&nbsp;AI.</h1>
+      <p>Olive Park Consulting helps small businesses bridge the gap between solid traditional IT and the AI-powered operations their competitors are already building.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">See How We Help</a>
+        <a href="#contact" class="btn btn-ghost">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem strip -->
+  <section class="problem">
+    <div class="container">
+      <p class="problem-text">"Your IT is reliable, your team is capable — but AI moves fast and the risk of getting it wrong is real. Whether you're curious, ready to build, or just want it done safely, <strong>we meet you where you are.</strong>"</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <span class="section-label">What We Do</span>
+      <h2>Three Ways We Work With You</h2>
+      <p class="section-sub">Every engagement starts with understanding your business — not selling you a solution.</p>
+
+      <div class="service-cards">
+
+        <div class="card">
+          <div class="card-accent"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="24" y1="4" x2="24" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="24" y1="32" x2="24" y2="44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="4" y1="24" x2="16" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="32" y1="24" x2="44" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>AI Exploration</h3>
+          <p class="card-tag">For businesses curious about AI</p>
+          <p>You know AI could help — you just don't know where to start. We map your workflows, identify the highest-value opportunities, and evaluate whether off-the-shelf platforms or a custom solution is the right fit. You get a clear, jargon-free recommendation — not a sales pitch.</p>
+          <ul>
+            <li>Workflow analysis and pain-point assessment</li>
+            <li>Commercial AI platform evaluation</li>
+            <li>Custom vs. off-the-shelf feasibility</li>
+            <li>Prioritized road map with clear next steps</li>
+          </ul>
+        </div>
+
+        <div class="card card-featured">
+          <div class="card-accent"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="24,4 44,36 4,36" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <line x1="24" y1="18" x2="24" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="32" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>AI Implementation</h3>
+          <p class="card-tag">For businesses ready to deploy</p>
+          <p>You have a problem. You want it solved with AI. We select the right tools, configure them for your environment, and deploy — then train your team so the solution actually gets used. From document automation to intelligent data extraction, we turn AI potential into daily operational reality.</p>
+          <ul>
+            <li>Tool selection with cost-benefit analysis</li>
+            <li>Hands-on configuration and deployment</li>
+            <li>Integration with your existing systems</li>
+            <li>Staff training and IT team handover</li>
+          </ul>
+          <span class="badge">Most Common Starting Point</span>
+        </div>
+
+        <div class="card">
+          <div class="card-accent"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="32" height="32" rx="6" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 24 L22 30 L32 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Secure &amp; Scalable AI</h3>
+          <p class="card-tag">For businesses ready to scale</p>
+          <p>You know what you want to build — you just want it done right. We design secure data pipelines, enforce governance and role-based access, and stand up enterprise-grade AI workspaces so your investment scales safely and your data stays protected.</p>
+          <ul>
+            <li>Secure automated data pipelines</li>
+            <li>Enterprise AI governance and access controls</li>
+            <li>Managed AI workspaces with shared templates</li>
+            <li>Monitoring, DLP policies, and compliance guardrails</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="industries">
+    <div class="container">
+      <span class="section-label light">Experience</span>
+      <h2>Industries We've Worked In</h2>
+      <div class="industry-list">
+        <div class="industry-item">
+          <div class="industry-icon">&#x2696;&#xFE0F;</div>
+          <span>Professional Services</span>
+        </div>
+        <div class="industry-item">
+          <div class="industry-icon">&#x1F3E5;</div>
+          <span>Healthcare Operations</span>
+        </div>
+        <div class="industry-item">
+          <div class="industry-icon">&#x1F37D;&#xFE0F;</div>
+          <span>Food &amp; Hospitality</span>
+        </div>
+        <div class="industry-item industry-item-open">
+          <div class="industry-icon">&#x2B50;</div>
+          <span>Your Industry</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why" id="why">
+    <div class="container">
+      <span class="section-label">Why Olive Park</span>
+      <h2>Built for Businesses Like Yours</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-number">01</div>
+          <h4>We speak small business</h4>
+          <p>No enterprise consultancy overhead. You work directly with the person doing the work — someone who understands lean IT teams and real budgets.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-number">02</div>
+          <h4>We start with your goals, not our tools</h4>
+          <p>Every engagement begins with understanding your business before recommending anything. If AI isn't the right answer, we'll tell you.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-number">03</div>
+          <h4>Security is built in, not bolted on</h4>
+          <p>We design for security from day one — proper credential management, access controls, and data governance — so you don't have to retrofit it later.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-number">04</div>
+          <h4>We leave you able to run it</h4>
+          <p>Every solution includes training and documentation. You won't be dependent on us to keep the lights on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-decoration" aria-hidden="true">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(106,170,53,0.15)" stroke-width="30"/>
+          <circle cx="150" cy="150" r="80" fill="none" stroke="rgba(106,170,53,0.1)" stroke-width="20"/>
+        </svg>
+      </div>
+      <div class="container">
+        <span class="section-label">Get Started</span>
+        <h2>Let's Talk About Your Business</h2>
+        <p>Not sure which service fits? That's fine — tell us where you are and what you're trying to do. We'll figure out the right starting point together.</p>
+        <a href="mailto:phil@oliveparkconsulting.com" class="btn btn-primary btn-large">phil@oliveparkconsulting.com</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Olive Park Consulting</p>
+    <div class="container footer-inner">
+      <img src="images/logo.png" alt="Olive Park Consulting" class="footer-logo" />
+      <p>&copy; 2026 Olive Park Consulting &mdash; All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
